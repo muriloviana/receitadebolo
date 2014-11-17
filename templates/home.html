@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body_id %}home{% endblock %}
+
+
+{% block game %}
+	<div class="box_game">
+		<a href="fase1.html" class="bt_jogar botao">Jogar</a>
+		<div class="animate_area"></div>
+		<img class="logo" src="{{ STATIC_URL }}images/logo_capa.png">
+	</div>
+{% endblock %}
