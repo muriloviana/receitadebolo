@@ -1,6 +1,7 @@
 #Others
 .DS_Store
 venv
+local_settings.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

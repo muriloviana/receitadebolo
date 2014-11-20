@@ -9,16 +9,14 @@
 
 
 {% block game %}
-	<div class="box_game">
-		<div class="animate_area"></div>
-		
-		<div class="escolha_ajudante"></div>
-		<a href="javascript:selecionar('menina','menino');" class="bt_menina botao" id="menina">Menina</a>
-		<a href="javascript:selecionar('menino','menina');" class="bt_menino botao" id="menino">Menino</a>
-		<input type="hidden" id="id_avatar" value="" />
-		
-		<input type="text" maxlength="15" placeholder="Digite seu nome" id="id_player" />
+	<div class="animate_area"></div>
+	
+	<div class="escolha_ajudante"></div>
+	<a href="javascript:selecionar('menina','menino');" class="bt_menina botao" id="menina">Menina</a>
+	<a href="javascript:selecionar('menino','menina');" class="bt_menino botao" id="menino">Menino</a>
+	<input type="hidden" id="id_avatar" value="" />
+	
+	<input type="text" maxlength="15" placeholder="Digite seu nome" id="id_player" />
 
-		<a href="javascript:link('{% url fase 1 %}');" class="bt_avancar botao">Avançar</a>
-	</div>
+	<a href="javascript:link('{% url iniciar %}');" class="bt_avancar botao">Avançar</a>
 {% endblock %}

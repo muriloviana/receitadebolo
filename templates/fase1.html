@@ -1,1 +1,48 @@
-fase1.html
+{% extends 'base.html' %}
+{% block title %} Fase #1{% endblock %}
+{% block body_id %}fase{% endblock %}
+
+
+{% block js %}
+	<script src="{{ STATIC_URL }}js/dragdrop.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+
+{% block game %}
+	<div class="box_info">
+		<header>
+			<ul>
+				<li>
+					<img src="{{ STATIC_URL }}images/icon_bolo_chocolate.jpg"><br/>
+					0
+				</li>
+				<li>
+					<img src="{{ STATIC_URL }}images/icon_bolo_morango.jpg"><br/>
+					0
+				</li>
+			</ul>
+		</header>
+		<div class="balao"></div>
+		<footer>
+			<img src="{{ STATIC_URL }}images/{{ avatar }}.jpg">
+		</footer>
+	</div>
+
+	<div class="box_comandos">
+		<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" width="245" height="38" draggable="true" ondragstart="drag(event)">
+
+		<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" width="245" height="38" draggable="true" ondragstart="drag(event)">
+
+		<img src="{{ STATIC_URL }}images/bt_for.png" id="bt_for" width="245" height="114" draggable="true" ondragstart="drag(event)">
+		
+		<img src="{{ STATIC_URL }}images/bt_while.png" id="bt_while" width="245" height="114" draggable="true" ondragstart="drag(event)">
+		
+		<img src="{{ STATIC_URL }}images/bt_if_else.png" id="bt_if_else" width="245" height="190" draggable="true" ondragstart="drag(event)">
+	</div>
+
+	<div class="box_execucao" id="box_execucao">
+		<div id="cx_codigo" class="cx_codigo" ondrop="drop(event)" ondragover="allowDrop(event)">
+			
+		</div>
+	</div>
+{% endblock %}

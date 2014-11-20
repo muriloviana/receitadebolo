@@ -1,7 +1,7 @@
 # Django settings for receitadebolo project developed by Murilo Viana.
 # GitHub: https://github.com/muriloviana/receitadebolo
 
-import os
+import os, dj_database_url
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = True
@@ -12,6 +12,12 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+# Parse database configuration from $DATABASE_URL
+DATABASES = {'default': dj_database_url.config(default='postgres://oiqgynhtoxqtsk:LNfYVzxdBnKV5K8OBbJRMufmmx@ec2-54-83-204-85.compute-1.amazonaws.com:5432/d58fskjbee0uap')}
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
@@ -88,10 +94,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -122,3 +129,9 @@ LOGGING = {
         },
     }
 }
+
+# Local settings
+try:
+  from local_settings import *
+except ImportError:
+  pass
