@@ -29,20 +29,30 @@
 	</div>
 
 	<div class="box_comandos">
-		<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" width="245" height="38" draggable="true" ondragstart="drag(event)">
+		<figure>
+			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38" draggable="true" ondragstart="drag(event)">
+		</figure>
 
-		<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" width="245" height="38" draggable="true" ondragstart="drag(event)">
+		<figure>
+			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38" draggable="true" ondragstart="drag(event)">
+		</figure>
 
-		<img src="{{ STATIC_URL }}images/bt_for.png" id="bt_for" width="245" height="114" draggable="true" ondragstart="drag(event)">
+		<figure>
+			<img src="{{ STATIC_URL }}images/icon_for.png" id="bt_for" width="245" alt="For" height="78" draggable="true" ondragstart="drag(event)">
+		</figure>
 		
-		<img src="{{ STATIC_URL }}images/bt_while.png" id="bt_while" width="245" height="114" draggable="true" ondragstart="drag(event)">
+		<figure>
+			<img src="{{ STATIC_URL }}images/icon_while.png" id="bt_while" alt="While" width="245" height="78" draggable="true" ondragstart="drag(event)">
+		</figure>
 		
-		<img src="{{ STATIC_URL }}images/bt_if_else.png" id="bt_if_else" width="245" height="190" draggable="true" ondragstart="drag(event)">
+		<figure>
+			<img src="{{ STATIC_URL }}images/icon_if.png" id="bt_if" alt="If Else" width="245" height="118" draggable="true" ondragstart="drag(event)">
+		</figure>
 	</div>
 
 	<div class="box_execucao" id="box_execucao">
-		<div id="cx_codigo" class="cx_codigo" ondrop="drop(event)" ondragover="allowDrop(event)">
-			
-		</div>
+		<a href="" id="bt_interrogacao"></a>
+		<div id="cx_codigo" class="cx_codigo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<a href="" id="bt_estrela"></a>
 	</div>
 {% endblock %}
