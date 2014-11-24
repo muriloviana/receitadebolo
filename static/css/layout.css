@@ -71,10 +71,14 @@
 #fase .box_info footer img{}
 
 #fase .box_comandos{background-color: #5e4b4b; width: 280px; height: 600px; position: absolute; top: 0; left: 230px;}
-#fase .box_comandos figure{display: block; margin: 35px 17px; cursor: move;}
+#fase .box_comandos figure{display: block; margin: 50px 17px; cursor: move;}
+#fase .input_for{width: 58px; height: 28px; position: absolute; border: 1px solid #c9c9c9; margin: 4px 0 0 78px; text-align: center; font-size: 14px;}
+#fase .select_if{width: 130px; height: 30px; position: absolute; border: 1px solid #c9c9c9; margin: 5px 0 0 77px;}
 
 #fase .box_execucao{background: url(../images/bg_execucao.jpg) no-repeat center center #f4f4ec; width: 390px; height: 600px; position: absolute; top: 0; right: 0;}
-#fase .box_execucao .cx_codigo{width: 320px; height: 450px; border: 1px dashed #666; position: absolute; top:75px; left: 35px; box-shadow: 10px 10px 5px #888888;}
+#fase .box_execucao .escopo{width: 320px; height: 450px; border: 1px solid #666; position: absolute; top:75px; left: 35px; box-shadow: 10px 10px 5px #888888;}
+#fase .box_execucao .escopo li{border:1px solid transparent; width: 100%; height: 38px;}
+#fase .box_execucao .escopo li.over{border: 1px dashed #db6058; background-color: #fff;}
 #fase .box_execucao #bt_interrogacao{background: url(../images/interrogacao.jpg) no-repeat; width: 50px; height: 50px; top: 5px; right: 5px; display: block; position: absolute;}
 #fase .box_execucao #bt_estrela{background: url(../images/estrela.jpg) no-repeat; width: 50px; height: 50px; bottom: 5px; left: 5px; display: block; position: absolute;}
 

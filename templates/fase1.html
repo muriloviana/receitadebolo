@@ -28,31 +28,52 @@
 		</footer>
 	</div>
 
-	<div class="box_comandos">
+	<div class="box_comandos" id="box_comandos">
 		<figure>
-			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38" draggable="true" ondragstart="drag(event)">
+			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38">
 		</figure>
 
 		<figure>
-			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38" draggable="true" ondragstart="drag(event)">
+			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38">
 		</figure>
 
 		<figure>
-			<img src="{{ STATIC_URL }}images/icon_for.png" id="bt_for" width="245" alt="For" height="78" draggable="true" ondragstart="drag(event)">
+			<input type="text" class="input_for" value="0" />
+			<img src="{{ STATIC_URL }}images/bt_for.jpg" id="bt_for" width="245" alt="For" height="38">
 		</figure>
 		
 		<figure>
-			<img src="{{ STATIC_URL }}images/icon_while.png" id="bt_while" alt="While" width="245" height="78" draggable="true" ondragstart="drag(event)">
+			<img src="{{ STATIC_URL }}images/bt_while.jpg" id="bt_while" alt="While" width="245" height="38">
 		</figure>
 		
 		<figure>
-			<img src="{{ STATIC_URL }}images/icon_if.png" id="bt_if" alt="If Else" width="245" height="118" draggable="true" ondragstart="drag(event)">
+			<select class="select_if">
+				<option>Bolo de Chocolate</option>\
+				<option>Bolo de Morango</option>
+			</select>
+			<img src="{{ STATIC_URL }}images/bt_if.jpg" id="bt_if" alt="If" width="245" height="38">
+		</figure>
+
+		<figure>
+			<img src="{{ STATIC_URL }}images/bt_else.jpg" id="bt_else" alt="Else" width="105" height="38">
 		</figure>
 	</div>
 
-	<div class="box_execucao" id="box_execucao">
+	<div class="box_execucao">
 		<a href="" id="bt_interrogacao"></a>
-		<div id="cx_codigo" class="cx_codigo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<ul id="escopo" class="escopo">
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+		</ul>
 		<a href="" id="bt_estrela"></a>
 	</div>
 {% endblock %}
