@@ -5,6 +5,7 @@
 
 {% block js %}
 	<script src="{{ STATIC_URL }}js/dragdrop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ STATIC_URL }}js/chat.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
 
@@ -16,13 +17,101 @@
 					<img src="{{ STATIC_URL }}images/icon_bolo_chocolate.jpg"><br/>
 					0
 				</li>
+				<!--
 				<li>
 					<img src="{{ STATIC_URL }}images/icon_bolo_morango.jpg"><br/>
 					0
 				</li>
+				-->
 			</ul>
 		</header>
-		<div class="balao"></div>
+		<div class="balao">
+
+			<article id="chat1" style="display: block;">
+				<p style="margin: 80px 0 0 0;">Olá {{ player }}!</p>
+				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
+			</article>
+			<article id="chat2">
+				<p style="margin: 30px 0 0 0;">Eu me chamo</p>
+				<p>{{ ajudante }} e irei lhe</p>
+				<p>ajudar a alcançar os</p>
+				<p style="margin: 0 5px 0 0;">seus objetivos durante</p>
+				<p>as fases do jogo.</p>
+				<a href="javascript:chat(3);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat3">
+				<p style="margin: 40px 0 0 0;">Você aprenderá</p>
+				<p>alguns conceitos de</p>
+				<p style="margin: 0 5px 0 0;">programação brincando</p>
+				<p>de fazer bolos!</p>
+				<a href="javascript:chat(4);" style="margin: 5px 0 0 65px;">Hum, legal!</a>
+			</article>
+			<article id="chat4">
+				<p style="margin: 40px 0 0 0;">Mas antes de</p>
+				<p>começarmos, irei lhe</p>
+				<p style="margin: 0 5px 0 0;">apresentar a interface</p>
+				<p>do jogo.</p>
+				<a href="javascript:chat(5);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat5">
+				<p style="margin: 30px 0 0 0;">Este quadrado</p>
+				<p>informará a</p>
+				<p style="margin: 0 5px 0 0;">quantidade e os tipos</p>
+				<p>de bolos que você já</p>
+				<p>fez na fase atual.</p>
+				<a href="javascript:chat(6);" style="margin: 5px 0 0 75px;">Entendi</a>
+			</article>
+			<article id="chat6">
+				<p style="margin: 40px 0 0 0;">Para alcançar</p>
+				<p>os objetivos você</p>
+				<p style="margin: 0 5px 0 0;">terá que fazer todos</p>
+				<p>os itens dos pedidos.</p>
+				<a href="javascript:chat(7);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat7">
+				<p style="margin: 30px 0 0 0;">Nesta caixa</p>
+				<p>grande, ficarão os</p>
+				<p>blocos de ações que</p>
+				<p>você usará para</p>
+				<p style="margin: 0 5px 0 0;">realizar os objetivos.</p>
+				<a href="javascript:chat(8);" style="margin: 5px 0 0 75px;">Entendi</a>
+			</article>
+			<article id="chat8">
+				<p style="margin: 30px 0 0 0;">Este é o escopo.</p>
+				<p>Aqui os blocos de</p>
+				<p>ações deverão ser</p>
+				<p style="margin: 0 5px 0 0;">organizados de forma</p>
+				<p>correta.</p>
+				<a href="javascript:chat(9);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat9">
+				<p style="margin: 50px 0 0 0;">Este botão,</p>
+				<p>irá executar seus</p>
+				<p>blocos do escopo.</p>
+				<a href="javascript:chat(10);" style="margin: 5px 0 0 75px;">E depois?</a>
+			</article>
+			<article id="chat10">
+				<p style="margin: 35px 0 0 0;">Se seus blocos</p>
+				<p style="margin: 0 7px 0 0;">estiverem organizados</p>
+				<p>de forma lógica e</p>
+				<p>correta, você passará</p>
+				<p>para a próxima fase.</p>
+				<a href="javascript:chat(11);" style="margin: 5px 0 0 95px;">\o/</a>
+			</article>
+			<article id="chat11">
+				<p style="margin: 40px 0 0 0;">Só mais um</p>
+				<p>detalhe, este é o</p>
+				<p>botão de dúvidas. Use</p>
+				<p>quando necessário.</p>
+				<a href="javascript:chat(12);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat12">
+				<p style="margin: 55px 0 0 0;">Vamos começar!</p>
+				<p>Pedido da fase #1:</p>
+				<p>Fazer um bolo de</p>
+				<p>chocolate.</p>
+			</article>
+		</div>
 		<footer>
 			<img src="{{ STATIC_URL }}images/{{ avatar }}.jpg">
 		</footer>
@@ -32,7 +121,7 @@
 		<figure>
 			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38">
 		</figure>
-
+		<!--
 		<figure>
 			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38">
 		</figure>
@@ -57,6 +146,7 @@
 		<figure>
 			<img src="{{ STATIC_URL }}images/bt_else.jpg" id="bt_else" alt="Else" width="105" height="38">
 		</figure>
+		-->
 	</div>
 
 	<div class="box_execucao">

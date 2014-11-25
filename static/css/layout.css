@@ -65,8 +65,10 @@
 #fase .box_info header{background-color: #db6058; width: 220px; height: 115px; position: absolute; top: 15px; right: 0;}
 #fase .box_info header ul{}
 #fase .box_info header ul li{display: inline-block; margin: 10px 24px; font-size: 30px; color: #fff; text-align: center; line-height: 30px;}
-#fase .box_info .balao{background: url(../images/balao.jpg) no-repeat; width: 230px; height: 251px; position: absolute; top: 165px; left: 10px; text-align: center; font-size: 18px;}
-#fase .box_info .balao.flip{-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH";}
+#fase .box_info .balao{background: url(../images/balao.jpg) no-repeat; width: 230px; height: 251px; position: absolute; top: 165px; left: 10px;}
+#fase .box_info .balao article{display: none;}
+#fase .box_info .balao article p{text-align: center; font-size: 24px; overflow: hidden; height: 24px; line-height: 26px;}
+#fase .box_info .balao article a{padding: 8px 5px 5px 5px; display: inline-block; color: #fff; font-size: 24px; background-color: #db6058; line-height: 24px; border-radius: 5px;}
 #fase .box_info footer{width: 230px; height: 183px; text-align: center; position: absolute; bottom: 0;}
 #fase .box_info footer img{}
 

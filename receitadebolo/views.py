@@ -19,9 +19,15 @@ def iniciar(request):
 
 def fase(request, numero=None):
 
+	if request.session.get('avatar') == 'menina':
+		ajudante = 'Amanda'
+	else:
+		ajudante = 'Mateus'
+
 	VARS = {
 		'avatar': request.session.get('avatar'),
 		'player': request.session.get('player'),
+		'ajudante': ajudante,
 	}
 
 	return render(request, 'fase%s.html' % numero, VARS)
