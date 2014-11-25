@@ -1,21 +1,29 @@
 function organize() {
 	var escopo = document.getElementById('escopo');
 	var vetor = escopo.getElementsByTagName('li');
+
 	for (var i = 1; i < vetor.length; i++) {
+		
 		if (vetor[i].getElementsByTagName('img').length > 0){
 			var flag = false, j = i-1;
+			var bt_atual = vetor[i].getElementsByTagName('img')[0];
+			
 			while (flag == false){
+				
 				if (vetor[j].getElementsByTagName('img').length > 0) {
 					var bt_ant = vetor[j].getElementsByTagName('img')[0];
-					if (bt_ant.id == 'bt_for' || bt_ant.id == 'bt_while' || bt_ant.id == 'bt_if' || bt_ant.id == 'bt_else') {
-						var p = parseInt(vetor[j].style.paddingLeft.substring(0, vetor[j].style.paddingLeft.length - 2)) + 20;
+					
+					if (bt_ant.id == 'bt_for' || bt_ant.id == 'bt_while' || (bt_ant.id == 'bt_if' &&  bt_atual.id != 'bt_else') || bt_ant.id == 'bt_else') {
+						var p = parseInt(vetor[j].style.paddingLeft.substring(0, vetor[j].style.paddingLeft.length - 2)) + 35;
 						vetor[i].style.paddingLeft = p.toString()+'px';
 						flag = true;
+					
 					} else {
 						vetor[i].style.paddingLeft = vetor[j].style.paddingLeft;
 						j -= 1;
 						if (j <= 0) { flag=true; };
 					}
+				
 				} else {
 					vetor[i].style.paddingLeft = '0';
 					flag = true;
@@ -23,6 +31,8 @@ function organize() {
 			}
 		}
 	}
+
+	return false;
 }
 
 var static_url = '/static/images/';
@@ -34,12 +44,13 @@ function handleDragStart(e) {
 
 	e.dataTransfer.effectAllowed = 'move';
 	e.dataTransfer.setData('text/html', this.innerHTML);
+
+	return false;
 }
 
 function handleDragOver(e) {
-	if (e.preventDefault) {
-		e.preventDefault();
-	}
+	e.preventDefault();
+	e.stopPropagation();
 
 	e.dataTransfer.dropEffect = 'move';
 
@@ -47,9 +58,8 @@ function handleDragOver(e) {
 }
 
 function handleDrop(e) {
-	if (e.stopPropagation) {
-		e.stopPropagation();
-	}
+	e.preventDefault();
+	e.stopPropagation();
 
 	if (dragSrcEl != this) {
 		dragSrcEl.innerHTML = this.innerHTML;
