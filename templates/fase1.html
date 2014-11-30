@@ -6,29 +6,29 @@
 {% block js %}
 	<script src="{{ STATIC_URL }}js/dragdrop.js" type="text/javascript" charset="utf-8"></script>
 	<script src="{{ STATIC_URL }}js/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ STATIC_URL }}js/ajuda.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ STATIC_URL }}js/executar.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
 
 {% block game %}
 	<div class="box_info">
-		<header>
+		<header id="placar_bolos">
 			<ul>
 				<li>
 					<img src="{{ STATIC_URL }}images/icon_bolo_chocolate.jpg"><br/>
-					0
+					<span id="tchocolate">0</span>
 				</li>
-				<!--
-				<li>
+				<li style="display:none;">
 					<img src="{{ STATIC_URL }}images/icon_bolo_morango.jpg"><br/>
-					0
+					<span id="tmorango">0</span>
 				</li>
-				-->
 			</ul>
 		</header>
 		<div class="balao">
 
 			<article id="chat1" style="display: block;">
-				<p style="margin: 80px 0 0 0;">Olá {{ player }}!</p>
+				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
 				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
 			</article>
 			<article id="chat2">
@@ -51,7 +51,7 @@
 				<p>começarmos, irei lhe</p>
 				<p style="margin: 0 5px 0 0;">apresentar a interface</p>
 				<p>do jogo.</p>
-				<a href="javascript:chat(5);" style="margin: 5px 0 0 95px;">Ok</a>
+				<a href="javascript:chat(5,'placar');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat5">
 				<p style="margin: 30px 0 0 0;">Este quadrado</p>
@@ -66,7 +66,7 @@
 				<p>os objetivos você</p>
 				<p style="margin: 0 5px 0 0;">terá que fazer todos</p>
 				<p>os itens dos pedidos.</p>
-				<a href="javascript:chat(7);" style="margin: 5px 0 0 95px;">Ok</a>
+				<a href="javascript:chat(7,'comandos');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat7">
 				<p style="margin: 30px 0 0 0;">Nesta caixa</p>
@@ -74,15 +74,15 @@
 				<p>blocos de ações que</p>
 				<p>você usará para</p>
 				<p style="margin: 0 5px 0 0;">realizar os objetivos.</p>
-				<a href="javascript:chat(8);" style="margin: 5px 0 0 75px;">Entendi</a>
+				<a href="javascript:chat(8,'escopo');" style="margin: 5px 0 0 75px;">Entendi</a>
 			</article>
 			<article id="chat8">
 				<p style="margin: 30px 0 0 0;">Este é o escopo.</p>
 				<p>Aqui os blocos de</p>
 				<p>ações deverão ser</p>
-				<p style="margin: 0 5px 0 0;">organizados de forma</p>
-				<p>correta.</p>
-				<a href="javascript:chat(9);" style="margin: 5px 0 0 95px;">Ok</a>
+				<p style="margin: 0 8px 0 0;">arrastados e ordenados</p>
+				<p>de forma correta.</p>
+				<a href="javascript:chat(9,'estrela');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat9">
 				<p style="margin: 50px 0 0 0;">Este botão,</p>
@@ -96,24 +96,24 @@
 				<p>de forma lógica e</p>
 				<p>correta, você passará</p>
 				<p>para a próxima fase.</p>
-				<a href="javascript:chat(11);" style="margin: 5px 0 0 95px;">\o/</a>
+				<a href="javascript:chat(11,'ajuda');" style="margin: 5px 0 0 95px;">Uhu</a>
 			</article>
 			<article id="chat11">
 				<p style="margin: 40px 0 0 0;">Só mais um</p>
 				<p>detalhe, este é o</p>
 				<p>botão de dúvidas. Use</p>
 				<p>quando necessário.</p>
-				<a href="javascript:chat(12);" style="margin: 5px 0 0 95px;">Ok</a>
+				<a href="javascript:chat(12,'normal');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat12">
 				<p style="margin: 55px 0 0 0;">Vamos começar!</p>
 				<p>Pedido da fase #1:</p>
-				<p>Fazer um bolo de</p>
-				<p>chocolate.</p>
+				<p><span>Fazer um bolo de</span></p>
+				<p><span>chocolate.</span></p>
 			</article>
 		</div>
 		<footer>
-			<img src="{{ STATIC_URL }}images/{{ avatar }}.jpg">
+			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
 		</footer>
 	</div>
 
@@ -149,8 +149,8 @@
 		-->
 	</div>
 
-	<div class="box_execucao">
-		<a href="" id="bt_interrogacao"></a>
+	<div class="box_execucao" id="box_execucao">
+		<a href="" id="bt_interrogacao" onmouseover="ajudaOver(this);" onmouseout="ajudaOut(this);"></a>
 		<ul id="escopo" class="escopo">
 			<li style="padding-left:0;"></li>
 			<li style="padding-left:0;"></li>
@@ -164,6 +164,31 @@
 			<li style="padding-left:0;"></li>
 			<li style="padding-left:0;"></li>
 		</ul>
-		<a href="" id="bt_estrela"></a>
+		<a href="javascript:executar(1);" id="bt_estrela">Executar</a>
+	</div>
+
+	<div class="bg_sucesso" id="bg_sucesso"></div>
+	<div class="box_sucesso" id="box_sucesso">
+		<h1>Parabéns você concluiu a fase #1</h1>
+		<h2>Veja como poderia ser o seu código em uma linguagem de programação:</h2>
+		<div class="code">
+			<p>fazerBoloChocolate();</p>
+		</div>
+		<a href="{% url fase 2 %}">Próxima fase</a>
+	</div>
+
+	<div class="bg_erro" id="bg_erro"></div>
+	<div class="box_erro" id="box_erro">
+		<p>Infelizmente seu código está errado.</p>
+		<p>Mas não desanime, tente novamente.</p>
+		<a href="javascript:fechar_erro();">Tentar outra vez</a>
+	</div>
+
+	<div class="bg_aviso" id="bg_aviso"></div>
+	<div class="box_aviso" id="box_aviso">
+		<p>Todos os blocos de ações deverão ser usados.</p>
+		<p>Arraste-os para o escopo:</p>
+		<img src="{{ STATIC_URL }}images/ex_arrastar.jpg">
+		<a href="javascript:fechar_aviso();">Voltar</a>
 	</div>
 {% endblock %}

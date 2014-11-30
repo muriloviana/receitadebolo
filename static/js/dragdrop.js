@@ -17,13 +17,12 @@ function organize() {
 						var p = parseInt(vetor[j].style.paddingLeft.substring(0, vetor[j].style.paddingLeft.length - 2)) + 35;
 						vetor[i].style.paddingLeft = p.toString()+'px';
 						flag = true;
-					
+
 					} else {
 						vetor[i].style.paddingLeft = vetor[j].style.paddingLeft;
 						j -= 1;
-						if (j <= 0) { flag=true; };
+						if (j < 0) { flag=true; };
 					}
-				
 				} else {
 					vetor[i].style.paddingLeft = '0';
 					flag = true;

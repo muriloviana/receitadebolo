@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %} Fase #1{% endblock %}
+{% block body_id %}fase{% endblock %}
+
+
+{% block js %}
+	<script src="{{ STATIC_URL }}js/dragdrop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ STATIC_URL }}js/chat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ STATIC_URL }}js/ajuda.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ STATIC_URL }}js/executar.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+
+{% block game %}
+	<div class="box_info">
+		<header>
+			<ul>
+				<li>
+					<img src="{{ STATIC_URL }}images/icon_bolo_chocolate.jpg"><br/>
+					<span id="tchocolate">0</span>
+				</li>
+				<li>
+					<img src="{{ STATIC_URL }}images/icon_bolo_morango.jpg"><br/>
+					<span id="tmorango">0</span>
+				</li>
+			</ul>
+		</header>
+		<div class="balao">
+
+			<article id="chat1" style="display: block;">
+				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
+				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
+			</article>
+		</div>
+		<footer>
+			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
+		</footer>
+	</div>
+
+	<div class="box_comandos" id="box_comandos">
+		<figure>
+			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38">
+		</figure>
+	</div>
+
+	<div class="box_execucao">
+		<a href="" id="bt_interrogacao" onmouseover="ajudaOver(this);" onmouseout="ajudaOut(this);"></a>
+		<ul id="escopo" class="escopo">
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+			<li style="padding-left:0;"></li>
+		</ul>
+		<a href="javascript:executar(4);" id="bt_estrela">Executar</a>
+	</div>
+
+	<div class="bg_sucesso" id="bg_sucesso"></div>
+	<div class="box_sucesso" id="box_sucesso">
+		<h1>Parabéns você concluiu a fase #4</h1>
+		<h2>Veja como poderia ser o seu código em uma linguagem de programação:</h2>
+		<div class="code">
+			<p>fazerBoloMorango();</p>
+		</div>
+		<a href="{% url fase 5 %}">Próxima fase</a>
+	</div>
+
+	<div class="bg_erro" id="bg_erro"></div>
+	<div class="box_erro" id="box_erro">
+		<p>Infelizmente seu código está errado.</p>
+		<p>Mas não desanime, tente novamente.</p>
+		<a href="javascript:fechar_erro();">Tentar outra vez</a>
+	</div>
+{% endblock %}

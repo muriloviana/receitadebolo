@@ -99,6 +99,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
 
     'south',
+
+    'jogadores',
 )
 
 # A sample logging configuration. The only tangible logging

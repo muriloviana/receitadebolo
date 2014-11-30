@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
+from jogadores.models import Jogador
 
 
 def home(request):
@@ -11,8 +12,14 @@ def personagem(request):
 def iniciar(request):
 
 	if request.method == 'GET':
-		request.session['avatar'] = request.GET.get('avatar')
-		request.session['player'] = request.GET.get('player')
+
+		novo = Jogador(
+			nome = request.GET.get('player'),
+			avatar = request.GET.get('avatar'),
+		)
+		novo.save()
+		request.session['jogador'] = novo
+
 		return redirect('/fase/1/')
 	else:
 		return redirect('personagem')
@@ -25,8 +32,7 @@ def fase(request, numero=None):
 		ajudante = 'Mateus'
 
 	VARS = {
-		'avatar': request.session.get('avatar'),
-		'player': request.session.get('player'),
+		'jogador': request.session.get('jogador'),
 		'ajudante': ajudante,
 	}
 

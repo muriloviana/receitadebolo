@@ -68,25 +68,46 @@
 #fase .box_info .balao{background: url(../images/balao.jpg) no-repeat; width: 230px; height: 251px; position: absolute; top: 165px; left: 10px;}
 #fase .box_info .balao article{display: none;}
 #fase .box_info .balao article p{text-align: center; font-size: 24px; overflow: hidden; height: 24px; line-height: 26px;}
+#fase .box_info .balao article p span{color: #2D86BA;}
 #fase .box_info .balao article a{padding: 8px 5px 5px 5px; display: inline-block; color: #fff; font-size: 24px; background-color: #db6058; line-height: 24px; border-radius: 5px;}
 #fase .box_info footer{width: 230px; height: 183px; text-align: center; position: absolute; bottom: 0;}
 #fase .box_info footer img{}
 
-#fase .box_comandos{background-color: #5e4b4b; width: 280px; height: 600px; position: absolute; top: 0; left: 230px;}
+#fase .box_comandos{background-color: #5e4b4b; width: 280px; height: 600px; position: absolute; top: 0; left: 230px; z-index: 5;}
 #fase .box_comandos figure{display: block; margin: 50px 17px; cursor: move;}
 #fase .input_for{width: 58px; height: 28px; position: absolute; border: 1px solid #c9c9c9; margin: 4px 0 0 78px; text-align: center; font-size: 14px;}
 #fase .select_if{width: 130px; height: 30px; position: absolute; border: 1px solid #c9c9c9; margin: 5px 0 0 77px;}
 
 #fase .box_execucao{background: url(../images/bg_execucao.jpg) no-repeat center center #f4f4ec; width: 390px; height: 600px; position: absolute; top: 0; right: 0;}
 #fase .box_execucao .escopo{width: 320px; height: 450px; border: 1px solid #666; position: absolute; top:75px; left: 35px; box-shadow: 10px 10px 5px #888888;}
-#fase .box_execucao .escopo li{border:1px solid transparent; width: 100%; height: 38px;}
+#fase .box_execucao .escopo li{border:1px solid transparent; width: 100%; height: 38px; cursor: move;}
 #fase .box_execucao .escopo li.over{border: 1px dashed #db6058; background-color: #fff;}
-#fase .box_execucao #bt_interrogacao{background: url(../images/interrogacao.jpg) no-repeat; width: 50px; height: 50px; top: 5px; right: 5px; display: block; position: absolute;}
-#fase .box_execucao #bt_estrela{background: url(../images/estrela.jpg) no-repeat; width: 50px; height: 50px; bottom: 5px; left: 5px; display: block; position: absolute;}
+#fase .box_execucao #bt_interrogacao{background: url(../images/interrogacao.jpg) no-repeat right; width: 100px; height: 50px; top: 5px; right: 5px; display: block; position: absolute; padding-right: 55px; text-align: right; font-size: 35px; color: #e65037; line-height: 55px;}
+#fase .box_execucao #bt_interrogacao:hover{text-decoration: none;}
+#fase .box_execucao #bt_estrela{background: url(../images/estrela.jpg) no-repeat; width: 200px; height: 50px; bottom: 5px; left: 5px; display: block; position: absolute; padding-left: 55px; color: #44B39B; font-size: 35px; line-height: 55px;}
+#fase .box_execucao #bt_estrela:hover{text-decoration: none; font-size: 50px;}
 
+#fase .bg_sucesso{width: 900px; height: 600px; background-color: #000; opacity: 0.5; top: 0; left: 0; position: absolute; z-index: 20; display: none;}
+#fase .box_sucesso{width: 600px; height: 400px; background-color: #F4F4EC; border: 2px solid #5F4D4D; top: 0; left: 0; margin: 101px 0 0 151px; position: absolute; z-index: 21; display: none;}
+#fase .box_sucesso h1{color: #46B29A; font-size: 40px; text-align: center; margin-top: 20px; line-height: 48px;}
+#fase .box_sucesso h2{color: #DA5F58; font-size: 20px; text-align: center; margin-top: 10px; line-height: 24px;}
+#fase .box_sucesso .code{width: 490px; height: 190px; background-color: #fff; border: 1px solid #333; margin: 5px auto; padding: 20px;}
+#fase .box_sucesso .code p{color: #333; font-size: 16px; line-height: 20px; font-family: "Myriad Pro", sans-serif;}
+#fase .box_sucesso a{background: url(../images/next.jpg) no-repeat right; height: 55px; color: #2D86BA; font-size: 30px; line-height: 60px; padding-right: 65px; display: block; text-align: right; position: absolute; bottom: 0; right: 5px;}
+#fase .box_sucesso a:hover{text-decoration: none; font-size: 40px;}
 
+#fase .bg_erro{width: 900px; height: 600px; background-color: #000; opacity: 0.5; top: 0; left: 0; position: absolute; z-index: 20; display: none;}
+#fase .box_erro{width: 500px; height: 120px; background-color: #F4F4EC; border: 2px solid #5F4D4D; top: 0; left: 0; margin: 201px 0 0 201px; padding: 40px 0; position: absolute; z-index: 21; display: none;}
+#fase .box_erro p{font-size: 26px; text-align: center; color: #DA5F58; line-height: 30px;}
+#fase .box_erro a{background-color: #fff; color: #2D86BA; display: block; width: 150px; height: 30px; font-size: 20px; line-height: 30px; text-align: center; margin: 20px auto; border-radius: 5px; border: 1px solid #2D86BA;}
+#fase .box_erro a:hover{background-color: #2D86BA; color: #fff; text-decoration: none;}
 
-
+#fase .bg_aviso{width: 900px; height: 600px; background-color: #000; opacity: 0.5; top: 0; left: 0; position: absolute; z-index: 20; display: none;}
+#fase .box_aviso{width: 500px; height: 250px; background-color: #F4F4EC; border: 2px solid #5F4D4D; top: 0; left: 0; margin: 101px 0 0 201px; padding: 40px 0; position: absolute; z-index: 21; display: none; text-align: center;}
+#fase .box_aviso p{font-size: 26px; text-align: center; color: #DA5F58; line-height: 30px;}
+#fase .box_aviso img{margin-top: 20px;}
+#fase .box_aviso a{background-color: #fff; color: #2D86BA; display: block; width: 150px; height: 30px; font-size: 20px; line-height: 30px; text-align: center; margin: 20px auto; border-radius: 5px; border: 1px solid #2D86BA;}
+#fase .box_aviso a:hover{background-color: #2D86BA; color: #fff; text-decoration: none;}
 
 
 
