@@ -1,9 +1,15 @@
+//
+// Efeito de selecionar avatar do ajudante. 
+//
 function selecionar(sel, desel){
 	document.getElementById(desel).classList.remove('selecionado');
 	document.getElementById(sel).classList.add('selecionado');
 	document.getElementById('id_avatar').value = sel;
 }
 
+//
+// Função que passa os dados via url para a geração de um novo jogador.
+//
 function link(url){
 	var avatar = document.getElementById('id_avatar');
 	var player = document.getElementById('id_player')

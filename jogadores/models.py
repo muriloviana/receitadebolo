@@ -11,6 +11,7 @@ class Jogador(models.Model):
 	data = models.DateTimeField(auto_now=True)
 	nome = models.CharField(max_length=16)
 	avatar = models.CharField(max_length=16, choices=AVATAR)
+	zerou = models.BooleanField(default=False)
 
 	def codigo(self):
 		return '%08d' % self.id

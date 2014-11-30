@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Fase #9{% endblock %}
+{% block title %} Fase #11{% endblock %}
 {% block body_id %}fase{% endblock %}
 
 
@@ -28,51 +28,40 @@
 		<div id="balao" class="balao">
 
 			<article id="chat1" style="display: block;">
-				<p style="margin: 60px 0 0 0;">Estamos indo muito</p>
-				<p>bem, parabéns!</p>
-				<a href="javascript:chat(2);" style="margin: 5px 0 0 60px;">Obrigado(a)</a>
+				<p style="margin: 45px 5px 0 0;">Chegamos na última</p>
+				<p>fase! Agora vamos</p>
+				<p>por em prática tudo</p>
+				<p>que aprendemos.</p>
+				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat2" style="display: none;">
-				<p style="margin: 40px 0 0 0;">Temos um cliente</p>
-				<p>indeciso e com</p>
-				<p>pressa. Vamos tentar</p>
-				<p>resolver isto?</p>
-				<a href="javascript:chat(3);" style="margin: 5px 0 0 82px;">Vamos</a>
+				<p style="margin: 35px 0 0 0;">Nessa última</p>
+				<p>fase você terá que</p>
+				<p>fazer os bolos sem</p>
+				<p style="margin: 0 10px 0 0;">saber nada dos pedidos.</p>
+				<a href="javascript:chat(3);" style="margin: 5px 0 0 55px;">Como assim?</a>
 			</article>
 			<article id="chat3" style="display: none;">
-				<p style="margin: 30px 0 0 0;">O cliente irá</p>
-				<p>te informar a</p>
+				<p style="margin: 40px 0 0 0;">Você não saberá</p>
+				<p>nem o sabor, nem a</p>
 				<p>quantidade de bolos</p>
-				<p>que ele quer,</p>
-				<p>porém ...</p>
-				<a href="javascript:chat(4);" style="margin: 5px 0 0 82px;">Hum ...</a>
+				<p>que serão feitos.</p>
+				<a href="javascript:chat(4);" style="margin: 5px 0 0 85px;">Hum</a>
 			</article>
 			<article id="chat4" style="display: none;">
-				<p style="margin: 25px 0 0 0;">Porém ele não</p>
-				<p>irá dizer o sabor,</p>
-				<p>pois está indeciso.</p>
-				<p>Você fará o bolo com</p>
-				<p>base nas condições.</p>
-				<a href="javascript:chat(5,'novo_botao_if_else');" style="margin: 5px 0 0 50px;">Como assim?</a>
+				<p style="margin: 40px 0 0 0;">Conforme houver</p>
+				<p>pedidos, você fará</p>
+				<p>bolos de chocolate</p>
+				<p>ou de morango.</p>
+				<a href="javascript:chat(5);" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat5" style="display: none;">
-				<p style="margin: 45px 0 0 0;">Se ele pedir um</p>
-				<p>bolo de chocolate</p>
-				<p>você fará um bolo</p>
-				<p>de chocolate.</p>
-				<a href="javascript:chat(6);" style="margin: 5px 0 0 105px;">...</a>
-			</article>
-			<article id="chat6" style="display: none;">
-				<p style="margin: 65px 0 0 0;">Senão, você fará</p>
-				<p>um bolo de morango.</p>
-				<a href="javascript:chat(7);" style="margin: 5px 0 0 55px;">Vou tentar</a>
-			</article>
-			<article id="chat7" style="display: none;">
-				<p style="margin: 45px 0 0 0;">Confio em você!</p>
-				<p>Objetivo da fase #9:</p>
-				<p><span>Fazer um bolo do</span></p>
-				<p style="margin: 0 8px 0 0;"><span>sabor que for pedido.</span></p>
-
+				<p style="margin: 30px 0 0 0;">Então vamos lá!</p>
+				<p>Desafio Final:</p>
+				<p><span>Faça bolos de</span></p>
+				<p><span>chocolate ou de</span></p>
+				<p><span>morango, para cada</span></p>
+				<p><span>pedido feito.</span></p>
 			</article>
 		</div>
 		<div id="balao_pedido" class="balao_pedido"></div>
@@ -90,7 +79,11 @@
 			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38">
 		</figure>
 
-		<figure id="novo_botao_if" style="display:none;">
+		<figure>
+			<img src="{{ STATIC_URL }}images/bt_while.jpg" id="bt_while" alt="While" width="245" height="38">
+		</figure>
+
+		<figure>
 			<select class="select_if" id="verificar">
 				<option value="chocolate">Bolo de Chocolate</option>\
 				<option value="morango">Bolo de Morango</option>
@@ -98,7 +91,7 @@
 			<img src="{{ STATIC_URL }}images/bt_if.jpg" id="bt_if" alt="If" width="245" height="38">
 		</figure>
 
-		<figure id="novo_botao_else" style="display:none;">
+		<figure>
 			<img src="{{ STATIC_URL }}images/bt_else.jpg" id="bt_else" alt="Else" width="105" height="38">
 		</figure>
 	</div>
@@ -118,20 +111,23 @@
 			<li style="padding-left:0;"></li>
 			<li style="padding-left:0;"></li>
 		</ul>
-		<a href="javascript:executar(9);" id="bt_estrela">Executar</a>
+		<a href="javascript:executar(11);" id="bt_estrela">Executar</a>
 	</div>
 
 	<div class="bg_sucesso" id="bg_sucesso"></div>
 	<div class="box_sucesso" id="box_sucesso">
-		<h1>Parabéns você concluiu a fase #9</h1>
+		<h1>Parabéns você concluiu o Desafio Final</h1>
 		<h2>Veja como poderia ser o seu código em uma linguagem de programação:</h2>
 		<div class="code">
-			<p>if ( pedidoChocolate() ){</p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fazerBoloChocolate();</p>
-			<p>} else {</p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fazerBoloMorango();</p>
+			<p>while ( existirPedido() ){</p>
+			<p>&nbsp;&nbsp;&nbsp;if ( pedidoChocolate() ){</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fazerBolo("Chocolate");</p>
+			<p>&nbsp;&nbsp;&nbsp;} else {</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fazerBolo("Morango");</p>
+			<p>&nbsp;&nbsp;&nbsp;}</p>
+			<p>}</p>
 		</div>
-		<a href="{% url fase 10 %}">Próxima fase</a>
+		<a href="{% url final %}">Fim do jogo</a>
 	</div>
 
 	<div class="bg_erro" id="bg_erro"></div>

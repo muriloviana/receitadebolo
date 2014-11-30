@@ -25,7 +25,7 @@
 				</li>
 			</ul>
 		</header>
-		<div class="balao">
+		<div class="balao" id="balao">
 
 			<article id="chat1" style="display: block;">
 				<p style="margin: 35px 0 0 0;">Pelo grande</p>
@@ -42,10 +42,11 @@
 				<a href="javascript:chat(3,'novo_bloco_while');" style="margin: 5px 0 0 90px;">Vixi!</a>
 			</article>
 			<article id="chat3" style="display: none;">
-				<p style="margin: 40px 0 0 0;">Calma, tenho uma</p>
+				<p style="margin: 35px 0 0 0;">Calma, tenho uma</p>
 				<p>surpresa para você,</p>
-				<p>um novo bloco de ação</p>
-				<p>que vai te ajudar.</p>
+				<p>um novo bloco de</p>
+				<p>comando que vai</p>
+				<p>te ajudar.</p>
 				<a href="javascript:chat(4);" style="margin: 5px 0 0 90px;">Ufa</a>
 			</article>
 			<article id="chat4" style="display: none;">
@@ -65,6 +66,7 @@
 				<p><span>pedidos.</span></p>
 			</article>
 		</div>
+		<div id="balao_pedido" class="balao_pedido"></div>
 		<footer>
 			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
 		</footer>

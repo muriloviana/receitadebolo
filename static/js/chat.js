@@ -1,3 +1,6 @@
+//
+// Função de passagem e animações do diálogo do ajudante.
+//
 function chat(sel, ato) {
 	var a = document.getElementById('chat' + (parseInt(sel) - 1));
 	var prox = document.getElementById('chat' + sel);

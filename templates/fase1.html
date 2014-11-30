@@ -25,7 +25,7 @@
 				</li>
 			</ul>
 		</header>
-		<div class="balao">
+		<div id="balao" class="balao">
 
 			<article id="chat1" style="display: block;">
 				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
@@ -71,23 +71,23 @@
 			<article id="chat7">
 				<p style="margin: 30px 0 0 0;">Nesta caixa</p>
 				<p>grande, ficarão os</p>
-				<p>blocos de ações que</p>
-				<p>você usará para</p>
+				<p>blocos de comandos</p>
+				<p>que você usará para</p>
 				<p style="margin: 0 5px 0 0;">realizar os objetivos.</p>
 				<a href="javascript:chat(8,'escopo');" style="margin: 5px 0 0 75px;">Entendi</a>
 			</article>
 			<article id="chat8">
 				<p style="margin: 30px 0 0 0;">Este é o escopo.</p>
 				<p>Aqui os blocos de</p>
-				<p>ações deverão ser</p>
+				<p>comandos deverão ser</p>
 				<p style="margin: 0 8px 0 0;">arrastados e ordenados</p>
 				<p>de forma correta.</p>
 				<a href="javascript:chat(9,'estrela');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat9">
-				<p style="margin: 50px 0 0 0;">Este botão,</p>
-				<p>irá executar seus</p>
-				<p>blocos do escopo.</p>
+				<p style="margin: 50px 0 0 0;">Este botão irá</p>
+				<p>executar os blocos</p>
+				<p>de comando do escopo.</p>
 				<a href="javascript:chat(10);" style="margin: 5px 0 0 75px;">E depois?</a>
 			</article>
 			<article id="chat10">
@@ -101,7 +101,7 @@
 			<article id="chat11">
 				<p style="margin: 40px 0 0 0;">Só mais um</p>
 				<p>detalhe, este é o</p>
-				<p>botão de dúvidas. Use</p>
+				<p>botão de ajuda. Use</p>
 				<p>quando necessário.</p>
 				<a href="javascript:chat(12,'normal');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
@@ -112,6 +112,7 @@
 				<p><span>chocolate.</span></p>
 			</article>
 		</div>
+		<div id="balao_pedido" class="balao_pedido"></div>
 		<footer>
 			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
 		</footer>
@@ -121,32 +122,6 @@
 		<figure>
 			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38">
 		</figure>
-		<!--
-		<figure>
-			<img src="{{ STATIC_URL }}images/bt_bolo_morango.jpg" id="bt_bolo_morango" alt="Bolo de Morango" width="245" height="38">
-		</figure>
-
-		<figure>
-			<input type="text" class="input_for" value="0" />
-			<img src="{{ STATIC_URL }}images/bt_for.jpg" id="bt_for" width="245" alt="For" height="38">
-		</figure>
-		
-		<figure>
-			<img src="{{ STATIC_URL }}images/bt_while.jpg" id="bt_while" alt="While" width="245" height="38">
-		</figure>
-		
-		<figure>
-			<select class="select_if">
-				<option>Bolo de Chocolate</option>\
-				<option>Bolo de Morango</option>
-			</select>
-			<img src="{{ STATIC_URL }}images/bt_if.jpg" id="bt_if" alt="If" width="245" height="38">
-		</figure>
-
-		<figure>
-			<img src="{{ STATIC_URL }}images/bt_else.jpg" id="bt_else" alt="Else" width="105" height="38">
-		</figure>
-		-->
 	</div>
 
 	<div class="box_execucao" id="box_execucao">

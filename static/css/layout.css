@@ -70,6 +70,8 @@
 #fase .box_info .balao article p{text-align: center; font-size: 24px; overflow: hidden; height: 24px; line-height: 26px;}
 #fase .box_info .balao article p span{color: #2D86BA;}
 #fase .box_info .balao article a{padding: 8px 5px 5px 5px; display: inline-block; color: #fff; font-size: 24px; background-color: #db6058; line-height: 24px; border-radius: 5px;}
+#fase .box_info .balao_pedido{background: url(../images/balao.jpg) no-repeat; width: 230px; height: 251px; position: absolute; top: 165px; left: 10px; display: none;}
+#fase .box_info .balao_pedido article{padding: 70px 8px 0 0; text-align: center; font-size: 24px; color: #2D86BA; line-height: 26px;}
 #fase .box_info footer{width: 230px; height: 183px; text-align: center; position: absolute; bottom: 0;}
 #fase .box_info footer img{}
 
@@ -108,6 +110,30 @@
 #fase .box_aviso img{margin-top: 20px;}
 #fase .box_aviso a{background-color: #fff; color: #2D86BA; display: block; width: 150px; height: 30px; font-size: 20px; line-height: 30px; text-align: center; margin: 20px auto; border-radius: 5px; border: 1px solid #2D86BA;}
 #fase .box_aviso a:hover{background-color: #2D86BA; color: #fff; text-decoration: none;}
+
+
+
+#final section{background:url(../images/bg_final.jpg) no-repeat;}
+#final .parabens{background: url(../images/parabens.png) no-repeat; width: 225px; height: 63px; position: absolute; top: 20px; margin-left: 337px; z-index: 10;}
+#final .frase_final{background: url(../images/frase_final.png) no-repeat; width: 676px; height: 57px; position: absolute; top: 100px; margin-left: 112px; z-index: 10;}
+#final .animate_area{
+	width: 900px;
+	height: 210px;
+	position: absolute;
+	margin-top: 195px;
+	background: url(../images/bg_animado_capa.jpg);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 15s linear infinite;
+	-ms-animation: animatedBackground 15s linear infinite;
+	-moz-animation: animatedBackground 15s linear infinite;
+	-webkit-animation: animatedBackground 15s linear infinite;
+}
+#final .logo{position: absolute; width: 368px; height: 389px; top:50%; left:50%; margin: -194px 0 0 -184px;}
+#final .agradecimento{text-align: center; width: 900px; bottom: 10px; color: #333333; font-size: 18px; position: absolute;}
+
+
 
 
 

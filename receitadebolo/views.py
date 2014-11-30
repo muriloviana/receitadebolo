@@ -37,3 +37,11 @@ def fase(request, numero=None):
 	}
 
 	return render(request, 'fase%s.html' % numero, VARS)
+
+def final(request):
+
+	jogador = Jogador.objects.get(id=request.session.get('jogador').id)
+	jogador.zerou = True
+	jogador.save()
+
+	return render(request, 'final.html')

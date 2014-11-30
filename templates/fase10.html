@@ -25,7 +25,7 @@
 				</li>
 			</ul>
 		</header>
-		<div class="balao">
+		<div id="balao" class="balao">
 
 			<article id="chat1" style="display: block;">
 				<p style="margin: 40px 0 0 0;">Olha o cliente</p>
@@ -41,13 +41,15 @@
 				<a href="javascript:chat(3);" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat3" style="display: none;">
-				<p style="margin: 50px 0 0 0;">Está pronto?</p>
+				<p style="margin: 30px 0 0 0;">Está pronto?</p>
 				<p>Objetivo da fase #10:</p>
 				<p><span>Fazer cinco bolos de</span></p>
-				<p><span>chocolate ou de</span></p>
+				<p><span>acordo com o pedido,</span></p>
+				<p><span>chocolate ou</span></p>
 				<p><span>morango.</span></p>
 			</article>
 		</div>
+		<div id="balao_pedido" class="balao_pedido"></div>
 		<footer>
 			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
 		</footer>

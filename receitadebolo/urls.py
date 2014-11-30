@@ -11,6 +11,7 @@ urlpatterns = patterns('receitadebolo',
     url(r'^personagem/', 'views.personagem', name='personagem'),
     url(r'^iniciar/', 'views.iniciar', name='iniciar'),
     url(r'^fase/(?P<numero>[0-9]+)/', 'views.fase', name='fase'),
+    url(r'^final/', 'views.final', name='final'),
 
     # Admin
     url(r'^admin/', include(admin.site.urls)),

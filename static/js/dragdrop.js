@@ -1,3 +1,6 @@
+//
+// Função que organiza a indentação dos blocos de comandos.
+//
 function organize() {
 	var escopo = document.getElementById('escopo');
 	var vetor = escopo.getElementsByTagName('li');
@@ -34,9 +37,12 @@ function organize() {
 	return false;
 }
 
-var static_url = '/static/images/';
-var dragSrcEl = null;
+var static_url = '/static/images/'; // Diretório padrão das imagens do projeto.
+var dragSrcEl = null; // Src do elemento selecionado.
 
+//
+// Função de inicialização do efeito Drag (Arrastar).
+//
 function handleDragStart(e) {
 
 	dragSrcEl = this;
@@ -47,15 +53,30 @@ function handleDragStart(e) {
 	return false;
 }
 
+//
+// Função durante o efeito Drag (Arrastar).
+//
 function handleDragOver(e) {
 	e.preventDefault();
 	e.stopPropagation();
 
 	e.dataTransfer.dropEffect = 'move';
 
+	document.getElementById('escopo').style.border = "2px dashed #db6058";
+
 	return false;
 }
 
+//
+// Função após o efeito Drag (Arrastar).
+//
+function handleDragEnd(e) {
+	document.getElementById('escopo').style.border = "1px solid #666";
+}
+
+//
+// Função do efeito Drop (Soltar).
+//
 function handleDrop(e) {
 	e.preventDefault();
 	e.stopPropagation();
@@ -65,20 +86,29 @@ function handleDrop(e) {
 		this.innerHTML = e.dataTransfer.getData('text/html');
 	}
 
+	handleDragEnd(e);
 	organize();
 
 	return false;
 }
 
+//
+// Adicionando os efeitos aos blocos de comandos.
+//
 var cols = document.querySelectorAll('#box_comandos figure');
 [].forEach.call(cols, function(i) {
 	i.addEventListener('dragstart', handleDragStart, false);
 	i.addEventListener('dragover', handleDragOver, false);
+	i.addEventListener('dragend', handleDragEnd, false);
 });
 
+//
+// Adicionado os efeitos aos blocos de comandos dentro do escopo.
+//
 var linhas = document.querySelectorAll('#escopo li');
 [].forEach.call(linhas, function(i) {
 	i.addEventListener('dragstart', handleDragStart, false);
 	i.addEventListener('dragover', handleDragOver, false);
+	i.addEventListener('dragend', handleDragEnd, false);
 	i.addEventListener('drop', handleDrop, false);
 });

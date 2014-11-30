@@ -25,7 +25,7 @@
 				</li>
 			</ul>
 		</header>
-		<div class="balao">
+		<div id="balao" class="balao">
 
 			<article id="chat1" style="display: block;">
 				<p style="margin: 60px 0 0 0;">Vamos aprender</p>
@@ -54,6 +54,14 @@
 				<a href="javascript:chat(5);" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat5" style="display: none;">
+				<p style="margin: 30px 0 0 0;">Não esqueça de</p>
+				<p>digitar a quantidade</p>
+				<p>de vezes que você</p>
+				<p>deseja repetir os</p>
+				<p>blocos de comandos.</p>
+				<a href="javascript:chat(6);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat6" style="display: none;">
 				<p style="margin: 60px 3px 0 0;">Vamos por em prática.</p>
 				<p>Pedido da fase #3:</p>
 				<p><span>Fazer dez bolos de</span></p>
@@ -61,6 +69,7 @@
 			</article>
 
 		</div>
+		<div id="balao_pedido" class="balao_pedido"></div>
 		<footer>
 			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
 		</footer>
