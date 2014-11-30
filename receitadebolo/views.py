@@ -26,7 +26,7 @@ def iniciar(request):
 
 def fase(request, numero=None):
 
-	if request.session.get('avatar') == 'menina':
+	if request.session.get('jogador').avatar == 'menina':
 		ajudante = 'Amanda'
 	else:
 		ajudante = 'Mateus'
