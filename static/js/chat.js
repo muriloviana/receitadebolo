@@ -37,5 +37,14 @@ function chat(sel, ato) {
 		document.getElementById('escopo').style.opacity = '1';
 		document.getElementById('box_comandos').style.opacity = '1';
 		document.getElementById('placar_bolos').style.opacity = '1';
+	} else if (ato == 'novo_bloco_for'){
+		document.getElementById('novo_bloco_for').style.display = 'block';
+	} else if (ato == 'novo_bolo_morango'){
+		document.getElementById('novo_bolo_morango').style.display = 'block';
+	} else if (ato == 'novo_bloco_while'){
+		document.getElementById('novo_bloco_while').style.display = 'block';
+	} else if (ato == 'novo_botao_if_else'){
+		document.getElementById('novo_botao_if').style.display = 'block';
+		document.getElementById('novo_botao_else').style.display = 'block';
 	}
 }

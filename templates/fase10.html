@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Fase #1{% endblock %}
+{% block title %} Fase #10{% endblock %}
 {% block body_id %}fase{% endblock %}
 
 
@@ -28,8 +28,24 @@
 		<div class="balao">
 
 			<article id="chat1" style="display: block;">
-				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
-				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
+				<p style="margin: 40px 0 0 0;">Olha o cliente</p>
+				<p>indeciso aí de novo.</p>
+				<p>Vamos ver o que</p>
+				<p>ele gostaria?</p>
+				<a href="javascript:chat(2);" style="margin: 5px 0 0 80px;">Vamos</a>
+			</article>
+			<article id="chat2" style="display: none;">
+				<p style="margin: 50px 0 0 0;">Ele deseja cinco</p>
+				<p>bolos, mas ainda não</p>
+				<p>decidiu os sabores.</p>
+				<a href="javascript:chat(3);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat3" style="display: none;">
+				<p style="margin: 50px 0 0 0;">Está pronto?</p>
+				<p>Objetivo da fase #10:</p>
+				<p><span>Fazer cinco bolos de</span></p>
+				<p><span>chocolate ou de</span></p>
+				<p><span>morango.</span></p>
 			</article>
 		</div>
 		<footer>
@@ -103,5 +119,13 @@
 		<p>Infelizmente seu código está errado.</p>
 		<p>Mas não desanime, tente novamente.</p>
 		<a href="javascript:fechar_erro();">Tentar outra vez</a>
+	</div>
+
+	<div class="bg_aviso" id="bg_aviso"></div>
+	<div class="box_aviso" id="box_aviso">
+		<p>Todos os blocos de ações deverão ser usados.</p>
+		<p>Arraste-os para o escopo:</p>
+		<img src="{{ STATIC_URL }}images/ex_arrastar.jpg">
+		<a href="javascript:fechar_aviso();">Voltar</a>
 	</div>
 {% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Fase #1{% endblock %}
+{% block title %} Fase #7{% endblock %}
 {% block body_id %}fase{% endblock %}
 
 
@@ -28,8 +28,41 @@
 		<div class="balao">
 
 			<article id="chat1" style="display: block;">
-				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
-				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
+				<p style="margin: 35px 0 0 0;">Pelo grande</p>
+				<p>volume de pedidos,</p>
+				<p>decidimos realizar os</p>
+				<p>pedidos um a um.</p>
+				<a href="javascript:chat(2);" style="margin: 5px 0 0 55px;">Como assim?</a>
+			</article>
+			<article id="chat2" style="display: none;">
+				<p style="margin: 40px 0 0 0;">Agora você não</p>
+				<p>saberá a quantidade</p>
+				<p>de bolos, apenas os</p>
+				<p>sabores deles.</p>
+				<a href="javascript:chat(3,'novo_bloco_while');" style="margin: 5px 0 0 90px;">Vixi!</a>
+			</article>
+			<article id="chat3" style="display: none;">
+				<p style="margin: 40px 0 0 0;">Calma, tenho uma</p>
+				<p>surpresa para você,</p>
+				<p>um novo bloco de ação</p>
+				<p>que vai te ajudar.</p>
+				<a href="javascript:chat(4);" style="margin: 5px 0 0 90px;">Ufa</a>
+			</article>
+			<article id="chat4" style="display: none;">
+				<p style="margin: 30px 0 0 0;">Basta</p>
+				<p>colocar os blocos</p>
+				<p>abaixo dele para</p>
+				<p>executa-los enquanto</p>
+				<p>houver pedidos</p>
+				<a href="javascript:chat(5);" style="margin: 5px 0 0 80px;">Gostei</a>
+			</article>
+			<article id="chat5" style="display: none;">
+				<p style="margin: 30px 0 0 0;">Vamos começar.</p>
+				<p>Objetivo da fase #7:</p>
+				<p><span>Faça bolos de</span></p>
+				<p><span>chocolate</span></p>
+				<p><span>enquanto houver</span></p>
+				<p><span>pedidos.</span></p>
 			</article>
 		</div>
 		<footer>
@@ -42,7 +75,7 @@
 			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38">
 		</figure>
 
-		<figure>
+		<figure id="novo_bloco_while" style="display:none;">
 			<img src="{{ STATIC_URL }}images/bt_while.jpg" id="bt_while" alt="While" width="245" height="38">
 		</figure>
 	</div>
@@ -82,5 +115,13 @@
 		<p>Infelizmente seu código está errado.</p>
 		<p>Mas não desanime, tente novamente.</p>
 		<a href="javascript:fechar_erro();">Tentar outra vez</a>
+	</div>
+
+	<div class="bg_aviso" id="bg_aviso"></div>
+	<div class="box_aviso" id="box_aviso">
+		<p>Todos os blocos de ações deverão ser usados.</p>
+		<p>Arraste-os para o escopo:</p>
+		<img src="{{ STATIC_URL }}images/ex_arrastar.jpg">
+		<a href="javascript:fechar_aviso();">Voltar</a>
 	</div>
 {% endblock %}

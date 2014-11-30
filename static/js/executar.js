@@ -37,7 +37,7 @@ function fase(num, total_chocolate, total_morango, pedidos, qp_chocolate, qp_mor
 
 		return true
 
-	} else if (num == 9 && (pedidos[0] == 'chocolate' && total_chocolate == 1) || (pedidos[0] == 'morango' && total_morango == 1)){
+	} else if (num == 9 && ((pedidos[0] == 'chocolate' && total_chocolate == 1) || (pedidos[0] == 'morango' && total_morango == 1))){
 
 		return true
 
@@ -77,11 +77,16 @@ function executar(num){
 	for (var p = 0; p < randomIntFromInterval(5,8); p++) {
 		if (randomIntFromInterval(1,2) % 2 == 0){
 			pedidos[p] = 'chocolate';
+			if (p < 5) {
+				qp_chocolate += 1;
+			};
 		} else {
 			pedidos[p] = 'morango';
+			if (p < 5) {
+				qp_morango += 1;
+			};
 		}
 	};
-	console.log(pedidos);
 
 	var total_chocolate = 0, total_morango = 0;
 
@@ -104,11 +109,6 @@ function executar(num){
 
 				var loop = parseInt(document.getElementById('qloop').value);
 				for (var count = 0; count < loop; count++) {
-					if (pedidos[count] == 'chocolate'){
-						qp_chocolate += 1;
-					} else {
-						qp_morango += 1;
-					}
 
 					var stop = false;
 					var j = i+1;
@@ -217,7 +217,6 @@ function executar(num){
 
 			} else if (bt_atual.id == 'bt_if' || bt_atual.id == 'bt_else') {
 
-				console.log(pedidos[0]);
 				if (pedidos[0] == document.getElementById('verificar').value) {
 					var condicao = true;
 				} else {
@@ -262,12 +261,16 @@ function executar(num){
 					}
 				}
 				i = j;
-				console.log(i);
 
 			}
 		}
 	}
 
+	console.log(pedidos);
+	console.log(qp_chocolate);
+	console.log(total_chocolate);
+	console.log(qp_morango);
+	console.log(total_morango);
 	objetivo = fase(num, total_chocolate, total_morango, pedidos, qp_chocolate, qp_morango);
 	if (objetivo) {
 		document.getElementById('bg_sucesso').style.display = 'block';

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Fase #1{% endblock %}
+{% block title %} Fase #3{% endblock %}
 {% block body_id %}fase{% endblock %}
 
 
@@ -28,9 +28,38 @@
 		<div class="balao">
 
 			<article id="chat1" style="display: block;">
-				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
-				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
+				<p style="margin: 60px 0 0 0;">Vamos aprender</p>
+				<p>algo novo?</p>
+				<a href="javascript:chat(2);" style="margin: 5px 0 0 80px;">Vamos!</a>
 			</article>
+			<article id="chat2" style="display: none;">
+				<p style="margin: 45px 0 0 0;">Na fase anterior</p>
+				<p>repetimos o mesmo</p>
+				<p>bloco de ação mais</p>
+				<p>que uma vez.</p>
+				<a href="javascript:chat(3,'novo_bloco_for');" style="margin: 5px 0 0 95px;">Sim</a>
+			</article>
+			<article id="chat3" style="display: none;">
+				<p style="margin: 45px 0 0 0;">Agora você</p>
+				<p>terá um novo bloco</p>
+				<p>que pode repetir</p>
+				<p style="margin: 0 8px 0 0;">outras ações N vezes.</p>
+				<a href="javascript:chat(4);" style="margin: 5px 0 0 85px;">Legal</a>
+			</article>
+			<article id="chat4" style="display: none;">
+				<p style="margin: 45px 0 0 0;">Basta arrasta-lo</p>
+				<p>e colocar os outros</p>
+				<p>blocos, que serão</p>
+				<p style="margin: 0 8px 0 0;">repetidos, abaixo dele.</p>
+				<a href="javascript:chat(5);" style="margin: 5px 0 0 95px;">Ok</a>
+			</article>
+			<article id="chat5" style="display: none;">
+				<p style="margin: 60px 3px 0 0;">Vamos por em prática.</p>
+				<p>Pedido da fase #3:</p>
+				<p><span>Fazer dez bolos de</span></p>
+				<p><span>chocolate.</span></p>
+			</article>
+
 		</div>
 		<footer>
 			<img src="{{ STATIC_URL }}images/{{ jogador.avatar }}.jpg">
@@ -42,7 +71,7 @@
 			<img src="{{ STATIC_URL }}images/bt_bolo_chocolate.jpg" id="bt_bolo_chocolate" alt="Bolo de Chocolate" width="245" height="38">
 		</figure>
 
-		<figure>
+		<figure id="novo_bloco_for" style="display: none;">
 			<input type="text" class="input_for" value="0" id="qloop" />
 			<img src="{{ STATIC_URL }}images/bt_for.jpg" id="bt_for" width="245" alt="For" height="38">
 		</figure>
@@ -83,5 +112,13 @@
 		<p>Infelizmente seu código está errado.</p>
 		<p>Mas não desanime, tente novamente.</p>
 		<a href="javascript:fechar_erro();">Tentar outra vez</a>
+	</div>
+
+	<div class="bg_aviso" id="bg_aviso"></div>
+	<div class="box_aviso" id="box_aviso">
+		<p>Todos os blocos de ações deverão ser usados.</p>
+		<p>Arraste-os para o escopo:</p>
+		<img src="{{ STATIC_URL }}images/ex_arrastar.jpg">
+		<a href="javascript:fechar_aviso();">Voltar</a>
 	</div>
 {% endblock %}
