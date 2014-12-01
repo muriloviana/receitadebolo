@@ -26,6 +26,7 @@
 			</ul>
 		</header>
 		<div id="balao" class="balao">
+			<a href="javascript:repetir(1,7);" class="bt_repetir" id="bt_repetir">Repetir</a>
 
 			<article id="chat1" style="display: block;">
 				<p style="margin: 60px 0 0 0;">Estamos indo muito</p>
@@ -34,25 +35,24 @@
 			</article>
 			<article id="chat2" style="display: none;">
 				<p style="margin: 40px 0 0 0;">Temos um cliente</p>
-				<p>indeciso e com</p>
-				<p>pressa. Vamos tentar</p>
-				<p>resolver isto?</p>
+				<p>em dúvida sobre</p>
+				<p>os sabores. Vamos</p>
+				<p>tentar resolver isto?</p>
 				<a href="javascript:chat(3);" style="margin: 5px 0 0 82px;">Vamos</a>
 			</article>
 			<article id="chat3" style="display: none;">
-				<p style="margin: 30px 0 0 0;">O cliente irá</p>
-				<p>te informar a</p>
-				<p>quantidade de bolos</p>
-				<p>que ele quer,</p>
-				<p>porém ...</p>
+				<p style="margin: 40px 0 0 0;">O cliente vai te</p>
+				<p>dizer a quantidade</p>
+				<p>de bolos que ele</p>
+				<p>quer, porém ...</p>
 				<a href="javascript:chat(4);" style="margin: 5px 0 0 82px;">Hum ...</a>
 			</article>
 			<article id="chat4" style="display: none;">
 				<p style="margin: 25px 0 0 0;">Porém ele não</p>
-				<p>irá dizer o sabor,</p>
-				<p>pois está indeciso.</p>
-				<p>Você fará o bolo com</p>
-				<p>base nas condições.</p>
+				<p>vai dizer o sabor,</p>
+				<p>pois está em dúvida.</p>
+				<p>Então você usará</p>
+				<p>condições.</p>
 				<a href="javascript:chat(5,'novo_botao_if_else');" style="margin: 5px 0 0 50px;">Como assim?</a>
 			</article>
 			<article id="chat5" style="display: none;">
@@ -65,14 +65,15 @@
 			<article id="chat6" style="display: none;">
 				<p style="margin: 65px 0 0 0;">Senão, você fará</p>
 				<p>um bolo de morango.</p>
-				<a href="javascript:chat(7);" style="margin: 5px 0 0 55px;">Vou tentar</a>
+				<a href="javascript:chat(7,'final');" style="margin: 5px 0 0 60px;">Vou tentar</a>
 			</article>
 			<article id="chat7" style="display: none;">
-				<p style="margin: 45px 0 0 0;">Confio em você!</p>
-				<p>Objetivo da fase #9:</p>
-				<p><span>Fazer um bolo do</span></p>
-				<p style="margin: 0 8px 0 0;"><span>sabor que for pedido.</span></p>
-
+				<p style="margin: 30px 0 0 0;">Objetivo fase #9:</p>
+				<p><span>Se o cliente pedir</span></p>
+				<p style="margin: 0 5px 0 0;"><span>bolo de chocolate faça</span></p>
+				<p><span>1 bolo de chocolate,</span></p>
+				<p><span>senão, faça 1 bolo</span></p>
+				<p><span>de morango.</span></p>
 			</article>
 		</div>
 		<div id="balao_pedido" class="balao_pedido"></div>

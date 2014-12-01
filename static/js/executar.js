@@ -50,7 +50,7 @@ function fase(num, total_chocolate, total_morango, pedidos, qp_chocolate, qp_mor
 
 		return true
 
-	} else if (num == 9 && ((pedidos[0] == 'chocolate' && total_chocolate == 1) || (pedidos[0] == 'morango' && total_morango == 1))){
+	} else if (num == 9 && ((pedidos[0] == 'chocolate' && total_chocolate == 1 && total_morango == 0) || (pedidos[0] == 'morango' && total_morango == 1 && total_chocolate == 0))){
 
 		return true
 
@@ -143,18 +143,19 @@ function executar(num){
 			pedidos[p] = 'chocolate';
 			if (p < 5 && num == 10) {
 				qp_chocolate += 1;
-			} else {
+			} else if (num == 11){
 				qp_chocolate += 1;
 			};
 		} else {
 			pedidos[p] = 'morango';
 			if (p < 5 && num == 10) {
 				qp_morango += 1;
-			} else {
+			} else if (num == 11){
 				qp_morango += 1;
 			};
 		}
 	};
+	console.log(pedidos);
 
 	var total_chocolate = 0, total_morango = 0; total = 0; // Inicializando os contadores de bolos feitos de chocolate e morango.
 
@@ -586,6 +587,8 @@ function executar(num){
 	//
 	// Verificando se o objetivo foi completo ou não.
 	//
+	console.log('qp_chocolate = ' + qp_chocolate.toString());
+	console.log('qp_morango = ' + qp_morango.toString());
 	setTimeout( function(){
 		objetivo = fase(num, total_chocolate, total_morango, pedidos, qp_chocolate, qp_morango);
 		if (objetivo) {
@@ -620,4 +623,9 @@ function fechar_erro(){
 function fechar_aviso(){
 	document.getElementById('bg_aviso').style.display = 'none';
 	document.getElementById('box_aviso').style.display = 'none';
-				document.getElementById('balao_pedido').style.display = 'block';}
+	document.getElementById('balao').style.display = 'block';
+	document.getElementById('balao_pedido').style.display = 'none';
+}
+
+
+

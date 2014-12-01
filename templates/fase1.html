@@ -26,89 +26,93 @@
 			</ul>
 		</header>
 		<div id="balao" class="balao">
+			<a href="javascript:repetir(1,13);" class="bt_repetir" id="bt_repetir">Repetir</a>
 
 			<article id="chat1" style="display: block;">
 				<p style="margin: 80px 0 0 0;">Olá {{ jogador.nome }}!</p>
 				<a href="javascript:chat(2);" style="margin: 5px 0 0 95px;">Oi!</a>
 			</article>
 			<article id="chat2">
-				<p style="margin: 30px 0 0 0;">Eu me chamo</p>
-				<p>{{ ajudante }} e irei lhe</p>
-				<p>ajudar a alcançar os</p>
-				<p style="margin: 0 5px 0 0;">seus objetivos durante</p>
-				<p>as fases do jogo.</p>
+				<p style="margin: 50px 0 0 0;">Eu me chamo</p>
+				<p>{{ ajudante }} e irei te</p>
+				<p>ajudar durante o jogo.</p>
 				<a href="javascript:chat(3);" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat3">
-				<p style="margin: 40px 0 0 0;">Você aprenderá</p>
-				<p>alguns conceitos de</p>
-				<p style="margin: 0 5px 0 0;">programação brincando</p>
+				<p style="margin: 55px 0 0 0;">Você vai aprender</p>
+				<p style="margin: 0 10px 0 0;">programação brincando</p>
 				<p>de fazer bolos!</p>
 				<a href="javascript:chat(4);" style="margin: 5px 0 0 65px;">Hum, legal!</a>
 			</article>
 			<article id="chat4">
 				<p style="margin: 40px 0 0 0;">Mas antes de</p>
-				<p>começarmos, irei lhe</p>
-				<p style="margin: 0 5px 0 0;">apresentar a interface</p>
-				<p>do jogo.</p>
+				<p>começarmos, irei te</p>
+				<p style="margin: 0 5px 0 0;">apresentar como o</p>
+				<p>jogo funciona.</p>
 				<a href="javascript:chat(5,'placar');" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat5">
 				<p style="margin: 30px 0 0 0;">Este quadrado</p>
-				<p>informará a</p>
+				<p>mostra a</p>
 				<p style="margin: 0 5px 0 0;">quantidade e os tipos</p>
 				<p>de bolos que você já</p>
-				<p>fez na fase atual.</p>
+				<p>fez na fase.</p>
 				<a href="javascript:chat(6);" style="margin: 5px 0 0 75px;">Entendi</a>
 			</article>
 			<article id="chat6">
-				<p style="margin: 40px 0 0 0;">Para alcançar</p>
-				<p>os objetivos você</p>
-				<p style="margin: 0 5px 0 0;">terá que fazer todos</p>
-				<p>os itens dos pedidos.</p>
-				<a href="javascript:chat(7,'comandos');" style="margin: 5px 0 0 95px;">Ok</a>
+				<p style="margin: 40px 0 0 0;">Para passar de</p>
+				<p>fase você terá</p>
+				<p style="margin: 0 5px 0 0;">que fazer todos os</p>
+				<p>bolos dos pedidos.</p>
+				<a href="javascript:chat(7,'comandos');" style="margin: 5px 0 0 55px;">Deixa comigo</a>
 			</article>
 			<article id="chat7">
 				<p style="margin: 30px 0 0 0;">Nesta caixa</p>
-				<p>grande, ficarão os</p>
+				<p>grande estão os</p>
 				<p>blocos de comandos</p>
-				<p>que você usará para</p>
-				<p style="margin: 0 5px 0 0;">realizar os objetivos.</p>
+				<p style="margin: 0 5px 0 0;">que você vai usar para</p>
+				<p style="margin: 0 5px 0 0;">fazer os bolos.</p>
 				<a href="javascript:chat(8,'escopo');" style="margin: 5px 0 0 75px;">Entendi</a>
 			</article>
 			<article id="chat8">
-				<p style="margin: 30px 0 0 0;">Este é o escopo.</p>
-				<p>Aqui os blocos de</p>
-				<p>comandos deverão ser</p>
-				<p style="margin: 0 8px 0 0;">arrastados e ordenados</p>
-				<p>de forma correta.</p>
-				<a href="javascript:chat(9,'estrela');" style="margin: 5px 0 0 95px;">Ok</a>
+				<p style="margin: 50px 0 0 0;">Você deve arrastar</p>
+				<p>os blocos para dentro</p>
+				<p>desta área, chamada</p>
+				<p style="margin: 0 8px 0 0;">de Escopo.</p>
+				<a href="javascript:chat(9);" style="margin: 5px 0 0 95px;">Ok</a>
 			</article>
 			<article id="chat9">
-				<p style="margin: 50px 0 0 0;">Este botão irá</p>
-				<p>executar os blocos</p>
-				<p>de comando do escopo.</p>
-				<a href="javascript:chat(10);" style="margin: 5px 0 0 75px;">E depois?</a>
+				<p style="margin: 50px 0 0 0;">Lembrando que os</p>
+				<p>blocos devem estar</p>
+				<p>na ordem certa para</p>
+				<p style="margin: 0 8px 0 0;">passar de fase.</p>
+				<a href="javascript:chat(10,'estrela');" style="margin: 5px 0 0 75px;">Entendi</a>
 			</article>
 			<article id="chat10">
-				<p style="margin: 35px 0 0 0;">Se seus blocos</p>
-				<p style="margin: 0 7px 0 0;">estiverem organizados</p>
-				<p>de forma lógica e</p>
-				<p>correta, você passará</p>
-				<p>para a próxima fase.</p>
-				<a href="javascript:chat(11,'ajuda');" style="margin: 5px 0 0 95px;">Uhu</a>
+				<p style="margin: 50px 0 0 0;">Clique neste botão</p>
+				<p>para verificar se</p>
+				<p>os seus blocos do</p>
+				<p><span>escopo</span> estão certos.</p>
+				<a href="javascript:chat(11);" style="margin: 5px 0 0 75px;">E depois?</a>
 			</article>
 			<article id="chat11">
+				<p style="margin: 45px 0 0 0;">Se seus blocos</p>
+				<p style="margin: 0 7px 0 0;">estiverem na ordem</p>
+				<p>certa você passará</p>
+				<p>para a próxima fase.</p>
+				<a href="javascript:chat(12,'ajuda');" style="margin: 5px 0 0 85px;">Uhu</a>
+			</article>
+			<article id="chat12">
 				<p style="margin: 40px 0 0 0;">Só mais um</p>
 				<p>detalhe, este é o</p>
 				<p>botão de ajuda. Use</p>
 				<p>quando necessário.</p>
-				<a href="javascript:chat(12,'normal');" style="margin: 5px 0 0 95px;">Ok</a>
+				<a href="javascript:chat(13,'final1');" style="margin: 5px 0 0 80px;">Certo</a>
 			</article>
-			<article id="chat12">
+			<article id="chat13">
 				<p style="margin: 55px 0 0 0;">Vamos começar!</p>
 				<p>Pedido da fase #1:</p>
-				<p><span>Fazer um bolo de</span></p>
+				<p><span>Fazer 1 bolo de</span></p>
 				<p><span>chocolate.</span></p>
 			</article>
 		</div>

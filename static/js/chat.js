@@ -24,22 +24,26 @@ function chat(sel, ato) {
 		document.getElementById('escopo').style.opacity = '1';
 		document.getElementById('escopo').style.border = '5px solid yellow';
 	} else if (ato == 'estrela'){
-		document.getElementById('escopo').style.opacity = '0.5';
-		document.getElementById('escopo').style.border = '1px solid #666';
+		document.getElementById('escopo').style.border = '2px solid #2D86BA';
 		document.getElementById('bt_estrela').style.opacity = '1';
 		document.getElementById('bt_estrela').style.border = '5px solid yellow';
 	} else if (ato == 'ajuda'){
+		document.getElementById('escopo').style.opacity = '0.5';
+		document.getElementById('escopo').style.border = '1px solid #666';
 		document.getElementById('bt_estrela').style.opacity = '0.5';
 		document.getElementById('bt_estrela').style.border = 'none';
 		document.getElementById('bt_interrogacao').style.opacity = '1';
 		document.getElementById('bt_interrogacao').style.border = '5px solid yellow';
-	} else if (ato == 'normal'){
+	} else if (ato == 'final1'){
 		document.getElementById('bt_interrogacao').style.opacity = '1';
 		document.getElementById('bt_interrogacao').style.border = 'none';
 		document.getElementById('bt_estrela').style.opacity = '1';
 		document.getElementById('escopo').style.opacity = '1';
 		document.getElementById('box_comandos').style.opacity = '1';
 		document.getElementById('placar_bolos').style.opacity = '1';
+		document.getElementById('bt_repetir').style.display = 'block';
+	} else if (ato == 'final'){
+		document.getElementById('bt_repetir').style.display = 'block';
 	} else if (ato == 'novo_bloco_for'){
 		document.getElementById('novo_bloco_for').style.display = 'block';
 	} else if (ato == 'novo_bolo_morango'){
@@ -51,3 +55,15 @@ function chat(sel, ato) {
 		document.getElementById('novo_botao_else').style.display = 'block';
 	}
 }
+
+//
+// Função para repetir chat
+//
+function repetir(prim, ulti){
+	document.getElementById('chat' + prim).style.display = 'block';
+	document.getElementById('chat' + ulti).style.display = 'none';
+	document.getElementById('bt_repetir').style.display = 'none';
+}
+
+
+
