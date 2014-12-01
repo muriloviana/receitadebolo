@@ -82,7 +82,7 @@ function fase(num, total_chocolate, total_morango, pedidos, qp_chocolate, qp_mor
 //
 function fazerBolo(tipo, bloco, tempo, pedidos){
 	setTimeout( function(){
-		document.getElementById('t'+tipo).innerText = parseInt(document.getElementById('t'+tipo).innerText) + 1;
+		document.getElementById('t'+tipo).innerHTML = parseInt(document.getElementById('t'+tipo).innerHTML) + 1;
 		if (tempo == 3 || tempo == 6 || tempo == 9){
 			bloco.style.border = '2px solid #f6a19c';
 		} else if (tempo == 1 || tempo == 4 || tempo == 7 || tempo == 10){
