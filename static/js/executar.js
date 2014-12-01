@@ -155,7 +155,6 @@ function executar(num){
 			};
 		}
 	};
-	console.log(pedidos);
 
 	var total_chocolate = 0, total_morango = 0; total = 0; // Inicializando os contadores de bolos feitos de chocolate e morango.
 
@@ -587,8 +586,6 @@ function executar(num){
 	//
 	// Verificando se o objetivo foi completo ou não.
 	//
-	console.log('qp_chocolate = ' + qp_chocolate.toString());
-	console.log('qp_morango = ' + qp_morango.toString());
 	setTimeout( function(){
 		objetivo = fase(num, total_chocolate, total_morango, pedidos, qp_chocolate, qp_morango);
 		if (objetivo) {
