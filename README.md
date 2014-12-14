@@ -1,6 +1,7 @@
 # Receita de Bolo
 
 Um jogo educativo para introduzir conceitos básicos de programação.
+
 [Link do jogo](https://receitadebolo.herokuapp.com/) hospedado no Heroku.
 
 Atualmente vivemos em um mundo onde a tecnologia está presente por todas as partes, praticamente tudo está vinculado de alguma forma com esse mundo digital, e poucas pessoas sabem “falar” essa linguagem das máquinas.
